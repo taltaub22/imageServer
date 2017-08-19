@@ -1,0 +1,22 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/obj":true,
+        "**/.vs":true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/*.js.map": true,
+        "**/.DS_Store": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.d.ts": {
+            "when": "$(basename).ts"
+        },
+        ".gitignore" : true,
+        ".dockerignore" : true,
+        "node_modules" : true
+    },
+    "files.trimTrailingWhitespace": true
+}
