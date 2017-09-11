@@ -1,6 +1,6 @@
 {
-  "name": "imageserver",
-  "version": "1.0.0",
+  "name": "@first-lego-league/image-server",
+  "version": "1.0.1",
   "description": "Serve up images for a consumer",
   "main": "index.js",
   "scripts": {
