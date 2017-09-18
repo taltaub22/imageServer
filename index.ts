@@ -4,7 +4,7 @@ var log4js = require('log4js');
 
 var logger = log4js.getLogger('node-static-alias');
 
-var fileServer = new staticAlias.Server('./images', {
+var fileServer = new staticAlias.Server(`${__dirname}/images`, {
     alias: [
         {
             match: '/legoEducation',

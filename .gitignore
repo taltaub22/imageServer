@@ -1,11 +1,9 @@
 node_modules
 .vs
-*.js
 *.js.map
 /obj/Debug
 /test/*.js
 /test/*.js.map
-**/*.js
 **/*.d.ts
 .idea
 event-replay-engine.iml
