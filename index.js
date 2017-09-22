@@ -17,6 +17,14 @@ var fileServer = new staticAlias.Server(__dirname + "/images", {
         {
             match: '/challengeTheme',
             serve: 'FIRST-FLL-HYDRO-DYNAMICS-web-logo.png'
+        },
+        {
+            match: '/sponsor1',
+            serve: '3m.png'
+        },
+        {
+            match: '/sponsor2',
+            serve: 'National_Instruments_logo.svg.png'
         }
     ],
     logger: console
