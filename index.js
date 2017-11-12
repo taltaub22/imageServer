@@ -9,15 +9,15 @@ var fileServer = new staticAlias.Server(`${__dirname}/images`, {
     alias: [
         {
             match: '/legoEducation',
-            serve: 'legoeducationlogo.png'
+            serve: () => glob.sync("legoEducation.*", { cwd: `${__dirname}/images` }).pop()
         },
         {
             match: '/firstLegoLeague',
-            serve: 'FIRSTLego_iconHorz_RGB.gif'
+            serve: () => glob.sync("firstLegoLeague.*", { cwd: `${__dirname}/images` }).pop()
         },
         {
             match: '/challengeTheme',
-            serve: 'FIRST-FLL-HYDRO-DYNAMICS-web-logo.png'
+            serve: () => glob.sync("challengeTheme.*", { cwd: `${__dirname}/images` }).pop()
         },
         {
             match: '/sponsor1',
