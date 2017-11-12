@@ -1,6 +1,7 @@
 import * as http from "http"
 import * as staticAlias from 'node-static-alias';
 import * as log4js from 'log4js';
+import * as glob from 'glob';
 
 var logger = log4js.getLogger('node-static-alias');
 
@@ -20,11 +21,11 @@ var fileServer = new staticAlias.Server(`${__dirname}/images`, {
         },
         {
             match: '/sponsor1',
-            serve: 'sponsor1.png'
+            serve: () => glob.sync("sponsor1.*", {cwd: `${__dirname}/images`}).pop()
         },
         {
             match: '/sponsor2',
-            serve: 'sponsor2.png'
+            serve: () => glob.sync("sponsor2.*", {cwd: `${__dirname}/images`}).pop()
         }
     ],
     logger: console

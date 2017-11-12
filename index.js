@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const http = require("http");
 const staticAlias = require("node-static-alias");
 const log4js = require("log4js");
+const glob = require("glob");
 var logger = log4js.getLogger('node-static-alias');
 var fileServer = new staticAlias.Server(`${__dirname}/images`, {
     alias: [
@@ -20,11 +21,11 @@ var fileServer = new staticAlias.Server(`${__dirname}/images`, {
         },
         {
             match: '/sponsor1',
-            serve: 'sponsor1.png'
+            serve: () => glob.sync("sponsor1.*", { cwd: `${__dirname}/images` }).pop()
         },
         {
             match: '/sponsor2',
-            serve: 'sponsor2.png'
+            serve: () => glob.sync("sponsor2.*", { cwd: `${__dirname}/images` }).pop()
         }
     ],
     logger: console
