@@ -1,10 +1,10 @@
 "use strict";
-exports.__esModule = true;
-var http = require("http");
-var staticAlias = require("node-static-alias");
-var log4js = require('log4js');
+Object.defineProperty(exports, "__esModule", { value: true });
+const http = require("http");
+const staticAlias = require("node-static-alias");
+const log4js = require("log4js");
 var logger = log4js.getLogger('node-static-alias');
-var fileServer = new staticAlias.Server(__dirname + "/images", {
+var fileServer = new staticAlias.Server(`${__dirname}/images`, {
     alias: [
         {
             match: '/legoEducation',

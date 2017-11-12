@@ -1,6 +1,6 @@
 import * as http from "http"
-var staticAlias = require("node-static-alias");
-var log4js = require('log4js');
+import * as staticAlias from 'node-static-alias';
+import * as log4js from 'log4js';
 
 var logger = log4js.getLogger('node-static-alias');
 
