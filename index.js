@@ -20,11 +20,11 @@ var fileServer = new staticAlias.Server(__dirname + "/images", {
         },
         {
             match: '/sponsor1',
-            serve: '3m.png'
+            serve: 'sponsor1.png'
         },
         {
             match: '/sponsor2',
-            serve: 'National_Instruments_logo.svg.png'
+            serve: 'sponsor2.png'
         }
     ],
     logger: console
@@ -34,3 +34,4 @@ http.createServer(function (request, response) {
         fileServer.serve(request, response);
     }).resume();
 }).listen(1395);
+//# sourceMappingURL=index.js.map
