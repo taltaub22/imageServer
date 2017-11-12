@@ -1,6 +1,7 @@
 import * as http from "http"
-var staticAlias = require("node-static-alias");
-var log4js = require('log4js');
+import * as staticAlias from 'node-static-alias';
+import * as log4js from 'log4js';
+import * as glob from 'glob';
 
 var logger = log4js.getLogger('node-static-alias');
 
@@ -8,23 +9,23 @@ var fileServer = new staticAlias.Server(`${__dirname}/images`, {
     alias: [
         {
             match: '/legoEducation',
-            serve: 'legoeducationlogo.png'
+            serve: () => glob.sync("legoEducation.*", {cwd: `${__dirname}/images`}).pop()
         },
         {
             match: '/firstLegoLeague',
-            serve: 'FIRSTLego_iconHorz_RGB.gif'
+            serve: () => glob.sync("firstLegoLeague.*", {cwd: `${__dirname}/images`}).pop()
         },
         {
             match: '/challengeTheme',
-            serve: 'FIRST-FLL-HYDRO-DYNAMICS-web-logo.png'
+            serve: () => glob.sync("challengeTheme.*", {cwd: `${__dirname}/images`}).pop()
         },
         {
             match: '/sponsor1',
-            serve: '3m.png'
+            serve: () => glob.sync("sponsor1.*", {cwd: `${__dirname}/images`}).pop()
         },
         {
             match: '/sponsor2',
-            serve: 'National_Instruments_logo.svg.png'
+            serve: () => glob.sync("sponsor2.*", {cwd: `${__dirname}/images`}).pop()
         }
     ],
     logger: console
