@@ -2,18 +2,20 @@
   "name": "@first-lego-league/image-server",
   "version": "1.1.1",
   "description": "Serve up images for a consumer",
-  "main": "index.js",
+  "main": "imageServer.js",
   "scripts": {
+    "start": "node imageServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "alan",
   "license": "ISC",
   "dependencies": {
-    "@types/log4js": "0.0.32",
-    "@types/node-static": "^0.7.0",
+    "body-parser": "^1.18.2",
+    "connect-busboy": "0.0.2",
+    "express": "^4.16.2",
+    "express-formidable": "^1.0.0",
+    "formidable": "^1.1.1",
     "glob": "^7.1.2",
-    "log4js": "^2.3.3",
-    "node-static": "^0.7.9",
-    "node-static-alias": "^1.0.0"
+    "multer": "^1.3.0"
   }
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images Settings</title>
+
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-reboot.css.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-grid.css.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.css">
+
+</head>
+<body>
+<div class="col-md-10 offset-1">
+    <h1 class="text-center"> Image Settings</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="/challengeTheme" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Challenge Theme</h4>
+                    <a href="#" class="btn btn-success">Change</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="/firstLegoLeague" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">First Lego League</h4>
+                    <a href="#" class="btn btn-success">Change</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="/legoEducation" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Lego Education</h4>
+                    <a href="#" class="btn btn-success">Change</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row offset-2">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="/sponsor1" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Sponsor 1</h4>
+                    <a href="#" class="btn btn-success">Change</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="/sponsor2" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Sponsor 2</h4>
+                    <button href="#" class="btn btn-success" onclick="openModal('sponsor2')">Change</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="changeImg" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Change Image</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="file" name="files[]" class="form-control-file" id="imgLoad" accept="image/*">
+                    <label for="imgLoad">Only images are allowed</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="submit" onclick="saveImage()">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/lib/jquery-3.2.1.min.js"></script>
+<script src="js/lib/popper.js"></script>
+<script src="js/lib/bootstrap.js"></script>
+<script src="js/imageUploader.js"></script>
+
+</body>
+</html>
