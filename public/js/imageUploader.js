@@ -1,15 +1,12 @@
 var imgToChange = undefined;
 
 function openModal(img) {
-
     // Set imgToChange when opening modal
     imgToChange = img;
-    // $('#imgLoad').attr('data-url', '/upload/' + imgToChange);
     $('#changeImg').modal('show');
 }
 
 function saveImage() {
-
     let form = new FormData();
     form.append('image', $('#imgLoad')[0].files[0]);
     $.ajax({
@@ -21,13 +18,10 @@ function saveImage() {
         success: function (data) {
             $('#changeImg').modal('hide');
             $('#imgLoad').val(undefined);
+        },
+        error: function (err) {
+            alert("There was an error with the file you tried to upload,\n please try again.")
         }
     });
 }
 
-$(document).ready(function () {
-    // Resetting imgToChange when modal is closes
-    $('#changeImg').on('hide.bs.modal', function () {
-        imgToChange = undefined;
-    });
-});

@@ -2,8 +2,8 @@ const express = require("express");
 const path = require('path');
 const fs = require('fs');
 const glob = require("glob");
-var multer = require('multer');
-var upload = multer({dest: 'temp/'});
+const multer = require('multer');
+const upload = multer({dest: 'temp/'});
 
 var app = express();
 
