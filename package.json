@@ -4,7 +4,7 @@
   "description": "Serve up images for a consumer",
   "main": "imageServer.js",
   "scripts": {
-    "start": "node imageServer.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "alan",
